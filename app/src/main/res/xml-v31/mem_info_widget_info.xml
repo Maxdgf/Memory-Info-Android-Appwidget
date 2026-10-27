@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:targetCellWidth="4"
+    android:targetCellHeight="1"
+    android:minResizeHeight="50dp"
+    android:minResizeWidth="300dp"
+    android:maxResizeHeight="50dp"
+    android:maxResizeWidth="300dp"
+    android:widgetCategory="home_screen"
+    android:updatePeriodMillis="180000"
+    android:resizeMode="horizontal|vertical"
+    android:initialLayout="@layout/glance_default_loading_layout"
+    android:description="@string/mem_info_widget_description"/>
