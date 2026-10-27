@@ -6,3 +6,9 @@ A simple widget built using **Jetpack Glance** that displays information about s
 
 ## Android versions 🔃
 Android 8 and later.
+
+## Project installation ⌨️
+1. Clone this repository `git clone https://github.com/Maxdgf/Memory-Info-Android-Appwidget.git`
+2. Open project in **Android Studio**
+3. Sync gradle files
+4. Launch app on emulator or physical device
