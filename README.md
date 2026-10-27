@@ -4,6 +4,21 @@ A simple widget built using **Jetpack Glance** that displays information about s
 ## Preview 🖼️
 <img src="previews/preview.jpg" width=250>
 
+## What does appwidget display? 🖥️
+* 📱 Device data
+    * Android version
+    * SDK version
+    * Model name
+    * Manufacturer
+* 💽 Storage memory data
+    * Total memory in GB
+    * Used memory in GB
+    * Used memory percent %
+* 🗃️ RAM data
+    * Total memory in GB
+    * Used memory in GB
+    * Used memory percent %
+
 ## Android versions 🔃
 Android 8 and later.
 
