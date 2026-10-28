@@ -1,6 +1,5 @@
 package com.maxdgf.meminfo.mem_info_glance_appwidget
 
-import android.annotation.SuppressLint
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
@@ -94,7 +93,6 @@ private fun MemoryDataProgressbar(
     }
 }
 
-@SuppressLint("RestrictedApi")
 @Composable
 internal fun MemInfoWidgetLayout(
     androidVersion: String,
