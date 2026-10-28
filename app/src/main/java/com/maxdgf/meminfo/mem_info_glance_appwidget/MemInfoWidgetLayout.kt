@@ -29,6 +29,14 @@ import androidx.glance.text.FontWeight
 import androidx.glance.unit.ColorProvider
 import com.maxdgf.meminfo.R
 
+/** Creates row with icon, progressbar and captions for displaying memory data.
+ *
+ * @param totalMemoryGb total memory size in GB
+ * @param usedMemoryGb used memory size in GB
+ * @param iconResId icon's drawable resource id
+ * @param caption data caption
+ * @param progressColor progressbar's track color provider
+ * @param progressBackgroundColor progressbar's background color provider */
 @Composable
 private fun MemoryDataProgressbar(
     totalMemoryGb: Float,
@@ -93,6 +101,16 @@ private fun MemoryDataProgressbar(
     }
 }
 
+/** Creates memory info widget's UI layout.
+ *
+ * @param androidVersion Android's version string
+ * @param sdkVersion Android SDK version int
+ * @param deviceModelName device's model name
+ * @param deviceManufacturer device's manufacturer name
+ * @param totalStorageGb device's total storage memory size in GB
+ * @param usedStorageGb device's used storage memory size in GB
+ * @param totalRamGb device's total RAM size in GB
+ * @param usedRamGb device's used RAM size in GB */
 @Composable
 internal fun MemInfoWidgetLayout(
     androidVersion: String,
@@ -110,6 +128,7 @@ internal fun MemInfoWidgetLayout(
             .background(colorProvider = GlanceTheme.colors.surface)
             .padding(10.dp)
     ) {
+        // Device's data row
         Row(
             modifier = GlanceModifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
@@ -145,6 +164,7 @@ internal fun MemInfoWidgetLayout(
 
         Spacer(modifier = GlanceModifier.height(7.dp))
 
+        // Device's storage memory data progressbar
         MemoryDataProgressbar(
             totalMemoryGb = totalStorageGb,
             usedMemoryGb = usedStorageGb,
@@ -156,6 +176,7 @@ internal fun MemInfoWidgetLayout(
 
         Spacer(modifier = GlanceModifier.height(7.dp))
 
+        // Device's RAM data progressbar
         MemoryDataProgressbar(
             totalMemoryGb = totalRamGb,
             usedMemoryGb = usedRamGb,
