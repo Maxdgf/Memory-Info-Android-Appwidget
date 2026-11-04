@@ -18,6 +18,7 @@ A simple widget built using **Jetpack Glance** that displays information about s
     * Total memory in GB
     * Used memory in GB
     * Used memory percent %
+    * Is Low memory mode enabled
 
 ## Android versions 🔃
 Android 8 and later.
