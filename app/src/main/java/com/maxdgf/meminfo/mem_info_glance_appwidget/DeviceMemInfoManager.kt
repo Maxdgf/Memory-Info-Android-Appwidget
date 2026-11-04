@@ -27,7 +27,8 @@ internal class DeviceMemInfoManager {
 
         return Ram(
             totalRamGb = memoryInfo.totalMem.toGb(),
-            availableRamGb = memoryInfo.availMem.toGb()
+            availableRamGb = memoryInfo.availMem.toGb(),
+            lowMemoryMode = memoryInfo.lowMemory
         )
     }
 

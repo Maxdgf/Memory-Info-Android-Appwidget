@@ -79,7 +79,7 @@ private fun MemoryDataProgressbar(
                     text = "$caption ${"%.1f".format((usedMemoryGb * 100) / totalMemoryGb)}%",
                     maxLines = 1,
                     style = TextStyle(
-                        fontSize = 12.sp,
+                        fontSize = 11.sp,
                         color = GlanceTheme.colors.onBackground,
                         fontWeight = FontWeight.Bold
                     )
@@ -91,7 +91,7 @@ private fun MemoryDataProgressbar(
                     text = "${"%.1f".format(usedMemoryGb)}/${"%.1f".format(totalMemoryGb)} GB",
                     maxLines = 1,
                     style = TextStyle(
-                        fontSize = 12.sp,
+                        fontSize = 11.sp,
                         color = GlanceTheme.colors.onBackground,
                         fontWeight = FontWeight.Bold
                     )
@@ -120,7 +120,8 @@ internal fun MemInfoWidgetLayout(
     totalStorageGb: Float,
     usedStorageGb: Float,
     totalRamGb: Float,
-    usedRamGb: Float
+    usedRamGb: Float,
+    lowMemoryMode: Boolean
 ) {
     Column(
         modifier = GlanceModifier
@@ -181,7 +182,7 @@ internal fun MemInfoWidgetLayout(
             totalMemoryGb = totalRamGb,
             usedMemoryGb = usedRamGb,
             iconResId = R.drawable.outline_memory_alt_24,
-            caption = "RAM",
+            caption = "RAM${if (lowMemoryMode) "(low memory mode)" else ""}",
             progressColor = GlanceTheme.colors.secondary,
             progressBackgroundColor = GlanceTheme.colors.secondaryContainer
         )

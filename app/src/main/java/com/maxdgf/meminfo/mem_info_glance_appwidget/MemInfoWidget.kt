@@ -14,6 +14,7 @@ internal class MemInfoWidget : GlanceAppWidget() {
         provideContent {
             val deviceMemInfoManager = DeviceMemInfoManager()
 
+            // get all needed data
             val ramData = deviceMemInfoManager.getRamData(context)
             val storageMemData = deviceMemInfoManager.getStorageMemoryData(context)
             val deviceData = deviceMemInfoManager.getDeviceData()
@@ -27,7 +28,8 @@ internal class MemInfoWidget : GlanceAppWidget() {
                     totalStorageGb = storageMemData.totalStorageGb,
                     usedStorageGb = storageMemData.run { totalStorageGb - availableStorageGb },
                     totalRamGb = ramData.totalRamGb,
-                    usedRamGb = ramData.run { totalRamGb - availableRamGb }
+                    usedRamGb = ramData.run { totalRamGb - availableRamGb },
+                    lowMemoryMode = ramData.lowMemoryMode
                 )
             }
         }
