@@ -12,7 +12,7 @@ import androidx.glance.material3.ColorProviders
 * Consequently, colors for progress bars currently stored within the color theme slots
 * of the Glance widget. */
 
-internal object MemInfoWidgetTheme {
+object MemInfoWidgetTheme {
     val colors = ColorProviders(
         light = lightColorScheme(
             surface = Color.White,

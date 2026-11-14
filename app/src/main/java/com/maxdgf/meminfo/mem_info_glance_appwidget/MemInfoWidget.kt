@@ -9,7 +9,7 @@ import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.provideContent
 
 
-internal class MemInfoWidget : GlanceAppWidget() {
+class MemInfoWidget : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         provideContent {
             val deviceMemInfoManager = DeviceMemInfoManager()

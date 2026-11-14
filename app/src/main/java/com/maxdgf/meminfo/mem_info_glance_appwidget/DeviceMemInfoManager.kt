@@ -12,7 +12,7 @@ import com.maxdgf.meminfo.mem_info_glance_appwidget.models.Ram
 import com.maxdgf.meminfo.mem_info_glance_appwidget.models.StorageMemory
 
 
-internal class DeviceMemInfoManager {
+class DeviceMemInfoManager {
     /** Converts bytes to gigabytes.
      * @return gigabytes */
     private fun Long.toGb() = this.toFloat() / (1024 * 1024 * 1024)

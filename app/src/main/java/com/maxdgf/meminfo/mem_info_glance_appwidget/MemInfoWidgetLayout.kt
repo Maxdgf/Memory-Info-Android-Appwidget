@@ -112,7 +112,7 @@ private fun MemoryDataProgressbar(
  * @param totalRamGb device's total RAM size in GB
  * @param usedRamGb device's used RAM size in GB */
 @Composable
-internal fun MemInfoWidgetLayout(
+fun MemInfoWidgetLayout(
     androidVersion: String,
     sdkVersion: Int,
     deviceModelName: String,
