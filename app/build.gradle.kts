@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.glance)
     implementation(libs.androidx.glance.appwidget)
     implementation(libs.androidx.glance.material3)
+    testImplementation(libs.androidx.glance.testing)
+    androidTestImplementation(libs.androidx.glance.appwidget.testing)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
