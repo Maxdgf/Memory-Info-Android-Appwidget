@@ -25,6 +25,8 @@ import androidx.glance.layout.Box
 import androidx.glance.layout.height
 import androidx.glance.layout.size
 import androidx.glance.layout.width
+import androidx.glance.semantics.semantics
+import androidx.glance.semantics.testTag
 import androidx.glance.text.FontWeight
 import androidx.glance.unit.ColorProvider
 import com.maxdgf.meminfo.R
@@ -53,7 +55,9 @@ private fun MemoryDataProgressbar(
         Image(
             provider = ImageProvider(iconResId),
             contentDescription = "$caption memory data icon",
-            modifier = GlanceModifier.size(25.dp),
+            modifier = GlanceModifier
+                .size(25.dp)
+                .semantics { testTag = "${caption}_icon" },
             colorFilter = ColorFilter.tint(GlanceTheme.colors.onSurface)
         )
 
@@ -65,7 +69,9 @@ private fun MemoryDataProgressbar(
         ) {
             LinearProgressIndicator(
                 progress = (usedMemoryGb * 1.0f) / totalMemoryGb,
-                modifier = GlanceModifier.fillMaxWidth(),
+                modifier = GlanceModifier
+                    .fillMaxWidth()
+                    .semantics { testTag = "${caption}_progressbar" },
                 color = progressColor,
                 backgroundColor = progressBackgroundColor
             )
@@ -77,6 +83,7 @@ private fun MemoryDataProgressbar(
             ) {
                 Text(
                     text = "$caption ${"%.1f".format((usedMemoryGb * 100) / totalMemoryGb)}%",
+                    modifier = GlanceModifier.semantics { testTag = "${caption}_total_GB" },
                     maxLines = 1,
                     style = TextStyle(
                         fontSize = 11.sp,
@@ -89,6 +96,7 @@ private fun MemoryDataProgressbar(
 
                 Text(
                     text = "${"%.1f".format(usedMemoryGb)}/${"%.1f".format(totalMemoryGb)} GB",
+                    modifier = GlanceModifier.semantics { testTag = "${caption}_used_GB" },
                     maxLines = 1,
                     style = TextStyle(
                         fontSize = 11.sp,
@@ -153,6 +161,7 @@ fun MemInfoWidgetLayout(
             ) {
                 Text(
                     text = "Android $androidVersion, SDK $sdkVersion, $deviceModelName ($deviceManufacturer)",
+                    modifier = GlanceModifier.semantics { testTag = "device_data" },
                     maxLines = 1,
                     style = TextStyle(
                         fontSize = 12.sp,
