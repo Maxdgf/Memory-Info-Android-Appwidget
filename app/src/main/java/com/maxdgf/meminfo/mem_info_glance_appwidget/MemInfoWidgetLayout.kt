@@ -52,6 +52,7 @@ private fun MemoryDataProgressbar(
         modifier = GlanceModifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Decorative icon
         Image(
             provider = ImageProvider(iconResId),
             contentDescription = "$caption memory data icon",
@@ -67,6 +68,7 @@ private fun MemoryDataProgressbar(
             modifier = GlanceModifier.defaultWeight(),
             contentAlignment = Alignment.Center
         ) {
+            // Used memory progressbar
             LinearProgressIndicator(
                 progress = (usedMemoryGb * 1.0f) / totalMemoryGb,
                 modifier = GlanceModifier
@@ -81,6 +83,7 @@ private fun MemoryDataProgressbar(
                     .fillMaxWidth()
                     .padding(horizontal = 2.dp)
             ) {
+                // Total memory text
                 Text(
                     text = "$caption ${"%.1f".format((usedMemoryGb * 100) / totalMemoryGb)}%",
                     modifier = GlanceModifier.semantics { testTag = "${caption}_total_GB" },
@@ -94,6 +97,7 @@ private fun MemoryDataProgressbar(
 
                 Spacer(modifier = GlanceModifier.defaultWeight())
 
+                // Used memory text
                 Text(
                     text = "${"%.1f".format(usedMemoryGb)}/${"%.1f".format(totalMemoryGb)} GB",
                     modifier = GlanceModifier.semantics { testTag = "${caption}_used_GB" },
