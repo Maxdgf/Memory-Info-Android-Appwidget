@@ -2,7 +2,9 @@
 A simple widget built using **Jetpack Glance** that displays information about **storage**, **RAM**, and the **device** itself. The widget updates every **3 minutes** and occupies a **4x1 cell** area.
 
 ## Preview 🖼️
-<img src="previews/preview.jpg" width=250>
+|            Widget on home screen           |                   Widget in widget picker                |
+| ------------------------------------------ | -------------------------------------------------------- |
+| <img src="previews/preview.jpg" width=250> | <img src="previews/widget_picker_preview.jpg" width=250> |
 
 ## Tech stack 📚
 * 📱 **UI**
