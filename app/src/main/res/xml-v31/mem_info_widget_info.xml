@@ -10,4 +10,5 @@
     android:updatePeriodMillis="180000"
     android:resizeMode="horizontal|vertical"
     android:initialLayout="@layout/glance_default_loading_layout"
+    android:previewLayout="@layout/mem_info_widget_preview"
     android:description="@string/mem_info_widget_description"/>

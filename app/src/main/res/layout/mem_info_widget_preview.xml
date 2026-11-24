@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/surface">
+
+    <!-- Phone data line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Phone icon -->
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/phone_icon_caption"
+            android:src="@drawable/baseline_phone_android_24"
+            android:tint="@color/on_surface" />
+
+        <!-- Phone data field -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="2dp"
+            android:background="@drawable/rounded_corners_shape"
+            android:backgroundTint="@color/on_surface">
+
+            <!-- Phone data text -->
+            <!-- Android version, SDK version, device model and manufacturer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="@string/phone_data_string"
+                android:layout_gravity="center"
+                android:textColor="@color/on_background" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Storage data line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical">
+
+        <!-- Storage icon -->
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/storage_memory_icon_caption"
+            android:src="@drawable/outline_storage_24"
+            android:tint="@color/on_surface" />
+
+        <!-- Used storage memory progressbar -->
+
+        <!-- Progressbar track -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="17dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/start_rounded_corners_shape"
+            android:backgroundTint="@color/storage_data_progress_track_color">
+
+            <!-- used memory percent -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:text="@string/used_storage_memory_percent_caption"
+                android:textColor="@color/on_background"
+                android:layout_marginStart="1dp"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <!-- Progressbar background -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="17dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/end_rounded_corners_shape"
+            android:backgroundTint="@color/storage_data_progress_background_color">
+
+            <!-- used memory in GB -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:text="@string/used_storage_memory_in_gb_caption"
+                android:textColor="@color/on_background"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="1dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- RAM data line -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical">
+
+        <!-- RAM icon -->
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/ram_icon_caption"
+            android:src="@drawable/outline_memory_alt_24"
+            android:tint="@color/on_surface" />
+
+        <!-- Used RAM progressbar -->
+
+        <!-- Progressbar track -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="17dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/start_rounded_corners_shape"
+            android:backgroundTint="@color/ram_data_progress_track_color">
+
+            <!-- used memory percent -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:text="@string/used_ram_percent"
+                android:textColor="@color/on_background"
+                android:layout_marginStart="1dp"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
+
+        <!-- Progressbar background -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="17dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/end_rounded_corners_shape"
+            android:backgroundTint="@color/ram_data_progress_background_color">
+
+            <!-- used memory in GB -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:text="@string/used_ram_in_gb_caption"
+                android:textColor="@color/on_background"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="1dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

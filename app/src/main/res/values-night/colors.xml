@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RAM data progressbar colors -->
+    <color name="ram_data_progress_track_color">#018ECB</color>
+    <color name="ram_data_progress_background_color">#800077A6</color>
+
+    <!-- Storage memory data progress bar colors -->
+    <color name="storage_data_progress_track_color">#00A4C2</color>
+    <color name="storage_data_progress_background_color">#8000B8D0</color>
+
+    <!-- Other colors -->
+    <color name="surface">#282828</color>
+    <color name="on_surface">#888888</color>
+    <color name="on_background">#FFFFFF</color>
+</resources>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mem Info</string>
+
     <string name="mem_info_widget_description">A widget that displays device information, as well as current storage and RAM usage.</string>
+
+    <string name="used_ram_in_gb_caption">3,0/7,0 GB</string>
+    <string name="used_ram_percent">RAM 40,0%</string>
+    <string name="ram_icon_caption">RAM icon</string>
+    <string name="used_storage_memory_in_gb_caption">150,0/256,0 GB</string>
+    <string name="used_storage_memory_percent_caption">Storage 60,0%</string>
+    <string name="storage_memory_icon_caption">Storage memory icon</string>
+    <string name="phone_data_string">Android 13, SDK 13, Model (manufacturer)</string>
+    <string name="phone_icon_caption">Phone icon</string>
 </resources>
